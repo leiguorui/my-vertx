@@ -16,7 +16,7 @@ public class SockJSExample extends Verticle {
 
         server.requestHandler(new Handler<HttpServerRequest>() {
             public void handle(HttpServerRequest req) {
-                if (req.path().equals("/")) req.response().sendFile("webapp/index.html"); // Serve the html
+                if (req.path().equals("/")) req.response().sendFile("src/main/resources/webapp/index.html"); // Serve the html
             }
         });
 
