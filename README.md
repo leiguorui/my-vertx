@@ -1,4 +1,4 @@
-## 在IntelliJ IDEA中调试vert.x程序
+#### 在IntelliJ IDEA中调试vert.x程序
 
 > 1. Open up the Run configuration
 > 2. I select the Application configuration
