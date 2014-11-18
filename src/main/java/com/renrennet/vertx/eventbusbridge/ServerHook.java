@@ -18,15 +18,16 @@ public class ServerHook implements EventBusBridgeHook {
 
     @Override
     public boolean handleSocketCreated(SockJSSocket sock) {
-        // You can do things in here like check the Origin of the request
-        String origin = sock.headers().get("origin");
-        logger.info("Origin is " + origin);
-        if (origin == null || !origin.equals("http://localhost:8080")) {
-            // Reject the socket
-            return false;
-        } else {
-            return true;
-        }
+//        // You can do things in here like check the Origin of the request
+//        String origin = sock.headers().get("origin");
+//        logger.info("Origin is " + origin);
+//        if (origin == null || !origin.equals("http://localhost:8080")) {
+//            // Reject the socket
+//            return false;
+//        } else {
+//            return true;
+//        }
+        return true;
     }
 
     /**
