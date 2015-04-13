@@ -36,6 +36,6 @@ public class BridgeServer extends Verticle {
         sockJSServer.setHook(hook);
         sockJSServer.bridge(new JsonObject().putString("prefix", "/eventbus"), permitted, permitted);
 
-        server.listen(8080);
+        server.listen(8070);
     }
 }
