@@ -8,5 +8,9 @@
 
 #### 如何测试
 
-1.  启动 BridgeServer.java
-2.  访问localhost:8087
+1.  启动 BridgeServer.java,访问localhost:8087
+2.  用maven打包，使用vertx runzip target/my-vertx-1.0-SNAPSHOT-mod.zip 启动
+
+#### 生成vertx 的maven项目骨架
+
+    mvn archetype:generate -Dfilter=io.vertx:

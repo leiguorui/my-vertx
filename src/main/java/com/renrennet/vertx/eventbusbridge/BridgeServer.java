@@ -22,8 +22,8 @@ public class BridgeServer extends Verticle {
         // Also serve the static resources. In real life this would probably be done by a CDN
         server.requestHandler(new Handler<HttpServerRequest>() {
             public void handle(HttpServerRequest req) {
-                if (req.path().equals("/")) req.response().sendFile("src/main/resources/webapp/eventbus.html"); // Serve the index.html
-                if (req.path().endsWith("vertxbus.js")) req.response().sendFile("src/main/resources/webapp/js/vertxbus.js"); // Serve the js
+                if (req.path().equals("/")) req.response().sendFile("webapp/eventbus.html"); // Serve the index.html
+                if (req.path().endsWith("vertxbus.js")) req.response().sendFile("webapp/js/vertxbus.js"); // Serve the js
             }
         });
 
@@ -37,5 +37,7 @@ public class BridgeServer extends Verticle {
         sockJSServer.bridge(new JsonObject().putString("prefix", "/eventbus"), permitted, permitted);
 
         server.listen(8070);
+
+        container.logger().info("server started");
     }
 }
